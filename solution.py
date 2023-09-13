@@ -1,7 +1,6 @@
 import re
 
 #Task 1
-
 pattern = r'\d+$'
 input_string = str(input("Enter string: "))
 if re.search(pattern, input_string):
@@ -44,7 +43,6 @@ for match in result:
     end = match.end()
     print(f"Substring '{pattern}' found at position {start}-{end}")
 
-
 #Task 6 using same sample and pattern as task 5
 sample_text = 'Python exercises, PHP exercises, C# exercises'
 pattern = 'exercises'
@@ -74,31 +72,25 @@ url = 'https://google.com/search?=date=2023/12/24'
 event_date = re.search('\d{4}/\d{2}/\d{2}', url)
 print(event_date)
 
-
-
 # Task 9
 url = 'https://google.com/search?=date=2023-12-24'
 event_date = re.sub('(\d{4})-(\d{2})-(\d{2})', r'\3-\2-\1', url)
 print(event_date)
 
-
 # Task 11
 all_nums = re.findall('\d+', 'Exercises number 1, 12, 13, and 345444 are important')
 print(all_nums)
-
 
 # Task 12
 text = 'The quick brown fox jumps fox over the fox lazy dog.'
 all_words = re.findall('\b[ae]\w*', text)
 print(all_words)
 
-
 # Task 13
 all_nums = re.finditer('\d+', 'Exercises number 1, 12, 13, and 345444 are important')
 for i in all_nums:
     print(f'Found {i.group()} at position {i.span()}')
 print(all_nums)
-
 
 # Task 14
 text = 'The quick brown Road fox jumps fox over the fox lazy dog.'
